@@ -1,0 +1,66 @@
+# ==============================================================================
+# TRỌNG SỐ MÔ HÌNH ĐỊNH GIÁ ENSEMBLE (Huỳnh phụ trách)
+# Tối ưu hóa dựa trên việc tối thiểu hóa MAE trên tập dữ liệu lịch sử
+# Tổng trọng số cho mỗi cấu hình luôn đảm bảo: sum(w_i) = 1.0, w_i >= 0
+# ==============================================================================
+
+default_weights:
+  nvt: 0.30        # Mô hình NVT Ratio & Metcalfe on-chain
+  mv_pq: 0.25      # Phương trình trao đổi MV = PQ
+  twap: 0.25       # Uniswap AMM Time-Weighted Average Price
+  comparable: 0.20 # Định giá so sánh tương đối (MC/TVL theo ngành)
+
+# Trọng số tinh chỉnh tối ưu hóa theo ngành (Sector-Optimized Weights)
+sector_weights:
+  DEX:
+    nvt: 0.20
+    mv_pq: 0.25
+    twap: 0.30      # Sàn DEX có thanh khoản AMM cao -> TWAP tin cậy cao
+    comparable: 0.25 # TVL là chỉ số nòng cốt của DEX
+
+  Lending:
+    nvt: 0.25
+    mv_pq: 0.20
+    twap: 0.20
+    comparable: 0.35 # Giao thức vay mượn phụ thuộc mạnh vào TVL và tỷ lệ MC/TVL
+
+  Infrastructure:
+    nvt: 0.40      # Hạ tầng & Oracle phản ánh giá trị qua số địa chỉ và tx on-chain
+    mv_pq: 0.30      # Số lượng truy vấn/sử dụng token
+    twap: 0.20
+    comparable: 0.10 # TVL ít liên quan hơn đến token hạ tầng
+
+  Liquid Staking:
+    nvt: 0.25
+    mv_pq: 0.15
+    twap: 0.25
+    comparable: 0.35 # TVL staking là thước đo cốt lõi
+
+  Derivatives:
+    nvt: 0.25
+    mv_pq: 0.25
+    twap: 0.30
+    comparable: 0.20
+
+# Trọng số riêng cho các token trọng điểm (sau backtest tối thiểu MAE)
+token_weights:
+  UNI:
+    nvt: 0.20
+    mv_pq: 0.25
+    twap: 0.35
+    comparable: 0.20
+  AAVE:
+    nvt: 0.25
+    mv_pq: 0.15
+    twap: 0.20
+    comparable: 0.40
+  LINK:
+    nvt: 0.45
+    mv_pq: 0.30
+    twap: 0.15
+    comparable: 0.10
+  MKR:
+    nvt: 0.20
+    mv_pq: 0.20
+    twap: 0.25
+    comparable: 0.35

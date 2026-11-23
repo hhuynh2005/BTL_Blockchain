@@ -1,0 +1,129 @@
+# ==============================================================================
+# DANH SÁCH TOKEN VÀ ĐỊA CHỈ PHỤC VỤ ĐỊNH GIÁ (Kha phụ trách)
+# Phạm vi: 12 token tiêu biểu trên hệ sinh thái Ethereum chia theo 4 ngành
+# ==============================================================================
+
+tokens:
+  # -------------------- 1. SÀN PHI TẬP TRUNG (DEX / AMM) --------------------
+  - symbol: "UNI"
+    name: "Uniswap"
+    sector: "DEX"
+    contract_address: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984"
+    sepolia_address: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
+    uniswap_pool: "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801" # UNI/ETH 0.3%
+    decimals: 18
+    chainlink_feed: "0x553303d460ee0afb37cf5287f3957eb6a72e8111"
+    description: "Token quản trị sàn giao dịch phi tập trung lớn nhất Ethereum"
+
+  - symbol: "CRV"
+    name: "Curve DAO Token"
+    sector: "DEX"
+    contract_address: "0xD533a949740bb3306d119CC777fa900bA034cd52"
+    sepolia_address: "0xd533a949740bb3306d119cc777fa900ba034cd52"
+    uniswap_pool: "0x4e0e2326ab2780ecb741f430663719dd45370327"
+    decimals: 18
+    chainlink_feed: "0xCd627aA160A6fA45Eb793D19Ca54f50208521343"
+    description: "Token AMM tối ưu cho giao dịch stablecoin và pegged assets"
+
+  - symbol: "SUSHI"
+    name: "SushiSwap"
+    sector: "DEX"
+    contract_address: "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2"
+    sepolia_address: "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2"
+    uniswap_pool: "0x795065dCc9f64b5614C407a6EFDC400DA6221FB0"
+    decimals: 18
+    chainlink_feed: "0xCc70F6196a43c66b23d7709bfb31096807666ac5"
+    description: "Sàn AMM đa chuỗi phân nhánh từ Uniswap"
+
+  - symbol: "BAL"
+    name: "Balancer"
+    sector: "DEX"
+    contract_address: "0xba100000625a3754423978a60c9317c58a424e3D"
+    sepolia_address: "0xba100000625a3754423978a60c9317c58a424e3d"
+    uniswap_pool: "0xdf16d004655979c55bdf99824f923dff260797f7"
+    decimals: 18
+    chainlink_feed: "0xdF2917806E30300537aEB49A7145814C5c574369"
+    description: "Giao thức thanh khoản và quản lý danh mục phi tập trung"
+
+  # -------------------- 2. CHO VAY & TIỀN TỆ (LENDING) ----------------------
+  - symbol: "AAVE"
+    name: "Aave"
+    sector: "Lending"
+    contract_address: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9"
+    sepolia_address: "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9"
+    uniswap_pool: "0x5ab53ee1d50eFa6873377da4d65d0614f7310446"
+    decimals: 18
+    chainlink_feed: "0x547a514d5e3794337C325e38036048A8140ab499"
+    description: "Giao thức thị trường thanh khoản không giám sát lớn nhất"
+
+  - symbol: "COMP"
+    name: "Compound"
+    sector: "Lending"
+    contract_address: "0xc00e94Cb662C3520282E6f5717214004A7f26888"
+    sepolia_address: "0xc00e94cb662c3520282e6f5717214004a7f26888"
+    uniswap_pool: "0xea4BA4CE14f2AC30706830176d78836Fdb032B6a"
+    decimals: 18
+    chainlink_feed: "0xdbd0200e7daa070a115714e030fd498e7380e66f"
+    description: "Giao thức lãi suất tự động trên chuỗi khối Ethereum"
+
+  - symbol: "MKR"
+    name: "Maker"
+    sector: "Lending"
+    contract_address: "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2"
+    sepolia_address: "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2"
+    uniswap_pool: "0xe8c1f0ea8128846050ac31141e5527666b217344"
+    decimals: 18
+    chainlink_feed: "0xec1d1b3b0443256cc3860e24a46fa65d752d744d"
+    description: "Tổ chức quản trị hệ thống phát hành stablecoin DAI phi tập trung"
+
+  # -------------------- 3. HẠ TẦNG & ORACLE (INFRASTRUCTURE) ----------------
+  - symbol: "LINK"
+    name: "Chainlink"
+    sector: "Infrastructure"
+    contract_address: "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+    sepolia_address: "0x779877a7b0d9e8603169ddbd7836e478b4624789"
+    uniswap_pool: "0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974"
+    decimals: 18
+    chainlink_feed: "0x2c1d072e956affc0d435cb7ac38ef18d24d9127c"
+    description: "Mạng lưới Oracle phi tập trung cung cấp dữ liệu off-chain lên smart contract"
+
+  - symbol: "GRT"
+    name: "The Graph"
+    sector: "Infrastructure"
+    contract_address: "0xc944E90C64B2c07662A292be6244BDf05Cda44a7"
+    sepolia_address: "0xc944e90c64b2c07662a292be6244bdf05cda44a7"
+    uniswap_pool: "0x2e642b8d59b45a1d8c5aEf716A84FF44ea665914"
+    decimals: 18
+    chainlink_feed: "0x717906d20395b1e62688b17b3eb899b8dcbc69c3"
+    description: "Giao thức chỉ mục và truy vấn dữ liệu blockchain phi tập trung"
+
+  - symbol: "LDO"
+    name: "Lido DAO"
+    sector: "Liquid Staking"
+    contract_address: "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32"
+    sepolia_address: "0x5a98fcbea516cf06857215779fd812ca3bef1b32"
+    uniswap_pool: "0xc4dae4a7fb6662837cbd225e51b3e5731db529b4"
+    decimals: 18
+    chainlink_feed: "0x4e844125952d32acdf439d2a2651b130e4557c8f"
+    description: "Giao thức staking thanh khoản hàng đầu cho Ethereum (stETH)"
+
+  # -------------------- 4. PHÁI SINH & LAYER 2 (DERIVATIVES & L2) -----------
+  - symbol: "SNX"
+    name: "Synthetix Network Token"
+    sector: "Derivatives"
+    contract_address: "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F"
+    sepolia_address: "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f"
+    uniswap_pool: "0x43ae24960e5534731fc831386c07755a2dc33d47"
+    decimals: 18
+    chainlink_feed: "0xdc3ea94cd0ac27d9a86c180091e7f77465597143"
+    description: "Giao thức phát hành tài sản tổng hợp (synthetic assets)"
+
+  - symbol: "ARB"
+    name: "Arbitrum"
+    sector: "Infrastructure"
+    contract_address: "0x912CE59144191C1204E64559FE8253a0e49E6548"
+    sepolia_address: "0x912ce59144191c1204e64559fe8253a0e49e6548"
+    uniswap_pool: "0xc6f780497a95e246eb1a7842991e79155025ae71"
+    decimals: 18
+    chainlink_feed: "0x31ffe4703a9f1e43305ed0e1e3458b68a1f6a1e0"
+    description: "Token quản trị Layer 2 Optimistic Rollup lớn nhất trên Ethereum"
