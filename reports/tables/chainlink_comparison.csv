@@ -1,0 +1,5 @@
+token,n_obs,mean_model_vs_market_%,mean_abs_model_vs_market_%,mean_oracle_vs_market_%,mean_abs_model_vs_oracle_%,corr_model_market,corr_model_oracle,corr_oracle_market,MAPE_model_vs_market,MAPE_model_vs_oracle,w_NVT_Metcalfe,w_MV_PQ,w_Uniswap_TWAP,w_Comparable_MCTVL
+UNI,110,-0.428,3.81,-0.003,3.785,0.8994,0.9008,0.9996,3.81,3.785,0.013,0.008,0.903,0.076
+AAVE,110,1.175,3.715,-0.013,3.75,0.9262,0.9247,0.9998,3.715,3.75,0.096,0.0,0.613,0.29
+LINK,110,-0.096,3.848,0.001,3.81,0.885,0.8863,0.9998,3.848,3.81,0.039,0.03,0.761,0.171
+MKR,110,1.894,3.918,-0.03,3.933,0.9726,0.9725,0.9999,3.918,3.933,0.14,0.005,0.716,0.139
